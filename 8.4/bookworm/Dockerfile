@@ -61,9 +61,9 @@ RUN set -eux; \
 
 # example configuration
 RUN set -eux; \
-	python -c 'import urllib.request; urllib.request.urlretrieve("https://github.com/IdentityPython/SATOSA/archive/refs/tags/v'${SATOSA_VERSION%%[a-z]*}'.tar.gz","/tmp/satosa.tgz")'; \
+	python -c 'import urllib.request; urllib.request.urlretrieve("https://github.com/rishabh-cldcvr/SATOSA/archive/refs/tags/v8.4.0-v0.0.1.tar.gz","/tmp/satosa.tgz")'; \
 	mkdir /usr/share/satosa; \
-	tar --extract --directory /usr/share/satosa --strip-components=1 --file /tmp/satosa.tgz SATOSA-${SATOSA_VERSION%%[a-z]*}/example/; \
+	tar --extract --directory /usr/share/satosa --strip-components=1 --file /tmp/satosa.tgz SATOSA-8.4.0-v0.0.1/example/; \
 	rm /tmp/satosa.tgz
 
 WORKDIR /etc/satosa
