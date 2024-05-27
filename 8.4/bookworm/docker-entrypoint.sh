@@ -149,7 +149,7 @@ function _main() {
 
 	if [ "$1" = 'gunicorn' ]; then
 		docker_setup_env
-		docker_create_config
+#		docker_create_config
 		docker_pprint_metadata
 		exec "$@"
 	fi
